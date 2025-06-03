@@ -10,6 +10,7 @@ import uz.consortgroup.core.api.v1.dto.course.enumeration.PriceType;
 import uz.consortgroup.core.api.v1.dto.course.response.module.ModuleResponseDto;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
@@ -25,8 +26,8 @@ public class CourseResponseDto {
     private PriceType priceType;
     private BigDecimal priceAmount;
     private BigDecimal discountPercent;
-    private LocalDateTime startTime;
-    private LocalDateTime endTime;
+    private Instant startTime;
+    private Instant endTime;
     private Integer accessDurationMin;
     private CourseStatus courseStatus;
     private String coverImageUrl;

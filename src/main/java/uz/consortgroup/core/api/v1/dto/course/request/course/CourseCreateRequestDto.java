@@ -11,9 +11,8 @@ import uz.consortgroup.core.api.v1.dto.course.enumeration.CourseType;
 import uz.consortgroup.core.api.v1.dto.course.enumeration.PriceType;
 import uz.consortgroup.core.api.v1.dto.course.request.module.ModuleCreateRequestDto;
 
-
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
@@ -35,9 +34,9 @@ public class CourseCreateRequestDto {
 
     private BigDecimal discountPercent;
 
-    private LocalDateTime startTime;
+    private Instant startTime;
 
-    private LocalDateTime endTime;
+    private Instant endTime;
 
     private Integer accessDurationMin;
 
