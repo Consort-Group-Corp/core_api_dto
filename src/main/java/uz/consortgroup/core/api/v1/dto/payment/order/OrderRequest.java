@@ -26,6 +26,9 @@ public class OrderRequest {
     @Pattern(regexp = "^[a-zA-Z0-9_-]+$", message = "External order ID must contain only letters, numbers, underscores, or hyphens")
     private String externalOrderId;
 
+    @NotNull(message = "itemId is required")
+    private UUID itemId;
+
     @NotNull(message = "itemType is required")
     private OrderItemType itemType;
 
