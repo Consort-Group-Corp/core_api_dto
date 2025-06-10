@@ -16,6 +16,7 @@ public class OrderResponse {
     private UUID id;
     private UUID userId;
     private String externalOrderId;
+    private UUID itemId;
     private Long amount;
     private OrderItemType itemType;
     private OrderSource source;
