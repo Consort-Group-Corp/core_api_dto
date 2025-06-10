@@ -26,6 +26,10 @@ publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
+            groupId = "uz.consortgroup"
+            artifactId = "core-api-dto"
+            version = "0.0.1"
         }
     }
 }
+
