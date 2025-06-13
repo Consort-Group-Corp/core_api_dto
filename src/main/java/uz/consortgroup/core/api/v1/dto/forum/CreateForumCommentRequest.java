@@ -17,9 +17,6 @@ public class CreateForumCommentRequest {
     @NotNull(message = "Topic ID is required")
     private UUID topicId;
 
-    @NotNull(message = "Author ID is required")
-    private UUID authorId;
-
     @NotBlank(message = "Content is required")
     private String content;
 }

@@ -17,9 +17,6 @@ public class CreateForumTopicRequest {
     @NotNull(message = "Forum ID is required")
     private UUID forumId;
 
-    @NotNull(message = "Author ID is required")
-    private UUID authorId;
-
     @NotBlank(message = "Title is required")
     private String title;
 
