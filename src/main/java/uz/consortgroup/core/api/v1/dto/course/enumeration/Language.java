@@ -22,7 +22,7 @@ public enum Language {
     @JsonCreator
     public static Language fromValue(String value) {
         for (Language language : Language.values()) {
-            if (language.value.equalsIgnoreCase(value)) {
+            if (language.value.equalsIgnoreCase(value.trim())) {
                 return language;
             }
         }
