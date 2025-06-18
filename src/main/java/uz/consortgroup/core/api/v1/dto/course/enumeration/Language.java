@@ -21,11 +21,19 @@ public enum Language {
 
     @JsonCreator
     public static Language fromValue(String value) {
+        if (value == null) {
+            throw new IllegalArgumentException("Language value must not be null");
+        }
+
+        value = value.trim().replace("\"", "");
+
         for (Language language : Language.values()) {
             if (language.value.equalsIgnoreCase(value)) {
                 return language;
             }
         }
+
         throw new IllegalArgumentException("Unknown language: " + value);
     }
+
 }
