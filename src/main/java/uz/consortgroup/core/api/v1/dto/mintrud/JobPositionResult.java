@@ -15,6 +15,7 @@ public class JobPositionResult {
     private int id;
     private String pinfl;
     private String surname;
+    private String name;
     private String patronym;
     private List<PositionDto> positions;
 }
