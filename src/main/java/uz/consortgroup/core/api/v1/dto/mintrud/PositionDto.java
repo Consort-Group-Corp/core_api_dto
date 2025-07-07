@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -12,4 +14,7 @@ import lombok.NoArgsConstructor;
 public class PositionDto {
     private String org;
     private String position;
+    private LocalDate startDate;
+    private String tin;
+    private String department;
 }
