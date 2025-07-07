@@ -12,4 +12,7 @@ import lombok.NoArgsConstructor;
 public class PositionDto {
     private String org;
     private String position;
+    private String startDate;
+    private String tin;
+    private String department;
 }
