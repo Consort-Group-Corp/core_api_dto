@@ -26,7 +26,7 @@ public class UserProfileRequestDto {
     @Size(max = 50)
     private String firstName;
 
-    @NotBlank(message = "Last name is required")
+    @NotBlank(message = "Middle name is required")
     @Size(max = 50)
     private String middleName;
 
