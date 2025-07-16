@@ -15,12 +15,12 @@ import java.util.UUID;
 @Builder
 public class UserSearchResponse {
     private UUID userId;
+    private Language language;
     private String lastName;
     private String firstName;
     private String middleName;
     private String email;
     private String pinfl;
     private UserRole role;
-    private Language language;
     private String organizationName;
 }
