@@ -27,7 +27,7 @@ public class NotificationCreateRequestDto {
 
     private LocalDateTime sendAt;
 
-    private boolean isActive;
+    private Boolean active;
 
     private List<UUID> recipientUserIds;
 
