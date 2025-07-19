@@ -4,5 +4,6 @@ public enum TaskStatus {
     PENDING,
     SENT,
     FAILED,
-    CANCELLED
+    CANCELLED,
+    SCHEDULED
 }
