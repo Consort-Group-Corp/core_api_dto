@@ -8,7 +8,9 @@ import lombok.Getter;
 public enum Language {
     ENGLISH("en"),
     RUSSIAN("ru"),
-    UZBEK("uz");
+    UZBEK_CYRILLIC("uz_cy"),
+    UZBEK("uz"),
+    KARAKALPAK("kaa");
 
     private final String code;
 
