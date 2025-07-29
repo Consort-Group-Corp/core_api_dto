@@ -1,4 +1,4 @@
-package uz.consortgroup.core.api.v1.dto.webinar;
+package uz.consortgroup.core.api.v1.dto.webinar.enumeration;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
