@@ -17,6 +17,7 @@ public class WebinarResponseDto {
     private UUID id;
     private String title;
     private String previewUrl;
+    private String previewFilename;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private String platformUrl;
