@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import uz.consortgroup.core.api.v1.dto.webinar.enumeration.LanguageCode;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -23,6 +24,7 @@ public class WebinarResponseDto {
     private String platformUrl;
     private UUID courseId;
     private LanguageCode languageCode;
+    private List<UUID> participants;
     private UUID createdBy;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

@@ -1,6 +1,7 @@
 package uz.consortgroup.core.api.v1.dto.webinar.request;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 import uz.consortgroup.core.api.v1.dto.webinar.enumeration.LanguageCode;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @AllArgsConstructor
@@ -39,4 +41,6 @@ public class WebinarCreateRequestDto {
 
     @NotNull(message = "Language code is required")
     private LanguageCode languageCode;
+
+    private List<UUID> participants;
 }
