@@ -24,7 +24,7 @@ public class WebinarResponseDto {
     private String platformUrl;
     private UUID courseId;
     private LanguageCode languageCode;
-    private List<UUID> participants;
+    private List<String> participants;
     private UUID createdBy;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

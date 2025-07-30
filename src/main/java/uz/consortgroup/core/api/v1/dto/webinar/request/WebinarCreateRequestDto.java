@@ -42,5 +42,5 @@ public class WebinarCreateRequestDto {
     @NotNull(message = "Language code is required")
     private LanguageCode languageCode;
 
-    private List<UUID> participants;
+    private List<String> participants;
 }
