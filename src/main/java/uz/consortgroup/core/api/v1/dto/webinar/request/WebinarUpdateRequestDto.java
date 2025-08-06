@@ -27,6 +27,10 @@ public class WebinarUpdateRequestDto {
     @Size(max = 100, message = "Webinar title must not exceed 100 characters")
     private String title;
 
+    @NotNull(message = "Category required")
+    @Size(max = 100, message = "Category must not exceed 100 characters")
+    private String category;
+
     @NotNull(message = "Start time is required")
     private LocalDateTime startTime;
 
