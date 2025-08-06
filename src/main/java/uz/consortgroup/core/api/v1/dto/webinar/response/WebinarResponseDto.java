@@ -17,6 +17,7 @@ import java.util.UUID;
 public class WebinarResponseDto {
     private UUID id;
     private String title;
+    private String category;
     private String previewUrl;
     private String previewFilename;
     private LocalDateTime startTime;
