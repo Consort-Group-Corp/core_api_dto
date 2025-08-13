@@ -16,6 +16,7 @@ dependencies {
     implementation("jakarta.validation:jakarta.validation-api:3.0.2")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.17.0")
     implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9")
 }
 
 tasks.test {
