@@ -2,9 +2,11 @@ package uz.consortgroup.core.api.v1.dto.user.enumeration;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 
 @Getter
+@Schema(name = "Language", description = "Язык. В JSON сериализуется как RU/EN/UZ/UZK/KAA", example = "RU")
 public enum Language {
     ENGLISH("en"),
     RUSSIAN("ru"),
