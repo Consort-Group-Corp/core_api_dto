@@ -2,7 +2,9 @@ package uz.consortgroup.core.api.v1.dto.course.enumeration;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.v3.oas.annotations.media.Schema;
 
+@Schema(name = "Language", description = "Язык. В JSON сериализуется как RU/EN/UZ", example = "RU")
 public enum Language {
     RUSSIAN("RU"),
     ENGLISH("EN"),
