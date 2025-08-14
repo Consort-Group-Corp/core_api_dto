@@ -1,5 +1,7 @@
 package uz.consortgroup.core.api.v1.dto.course.request.resource;
 
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,19 +18,35 @@ import java.util.UUID;
 @NoArgsConstructor
 @Data
 @Builder
+@Schema(name = "ResourceCreateRequestDto", description = "Создание ресурса урока (видео/изображение/документ и т.д.)")
 public class ResourceCreateRequestDto {
-    @NotNull
+    @NotNull(message = "Lesson ID is required")
+    @Schema(description = "ID урока", example = "4716b6d1-a634-4b50-8a46-c249c248ca22",
+            requiredMode = Schema.RequiredMode.REQUIRED)
     private UUID lessonId;
 
-    @NotNull
+    @NotNull(message = "Resource type is required")
+    @Schema(description = "Тип ресурса", example = "VIDEO",
+            requiredMode = Schema.RequiredMode.REQUIRED, implementation = ResourceType.class)
     private ResourceType resourceType;
 
-    @NotNull
+    @NotNull(message = "File URL is required")
+    @Schema(description = "URL файла ресурса", example = "https://cdn.example.com/lesson1/video.mp4",
+            requiredMode = Schema.RequiredMode.REQUIRED)
     private String fileUrl;
+
+    @Schema(description = "Размер файла в байтах", example = "1048576")
     private Long fileSize;
+
+    @Schema(description = "MIME-тип", example = "video/mp4", implementation = MimeType.class)
     private MimeType mimeType;
 
-    @NotNull
+    @NotNull(message = "Order position is required")
+    @Schema(description = "Порядок ресурса в уроке", example = "1",
+            requiredMode = Schema.RequiredMode.REQUIRED)
     private Integer orderPosition;
+
+    @ArraySchema(arraySchema = @Schema(description = "Переводы ресурса"),
+            schema = @Schema(implementation = ResourceTranslationRequestDto.class))
     private List<ResourceTranslationRequestDto> translations;
 }

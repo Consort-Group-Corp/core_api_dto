@@ -11,6 +11,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.9")
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
     implementation("jakarta.validation:jakarta.validation-api:3.0.2")
