@@ -18,6 +18,8 @@ import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
+import static uz.consortgroup.core.api.v1.dto.constants.SchemaPatterns.UUID_PATTERN_SCHEMA;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -25,8 +27,7 @@ import java.util.UUID;
 @Schema(name = "CourseCreateRequestDto", description = "Запрос на создание курса с переводами, модулями и уроками")
 public class CourseCreateRequestDto {
     @NotNull
-    @Schema(description = "ID автора курса", example = "e2f00427-fd76-41ad-940e-4624955f9384",
-            requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(description = "ID автора", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
     private UUID authorId;
 
     @NotNull(message = "Course type is required")

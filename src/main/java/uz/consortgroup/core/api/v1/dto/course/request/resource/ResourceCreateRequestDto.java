@@ -14,6 +14,8 @@ import uz.consortgroup.core.api.v1.dto.course.enumeration.ResourceType;
 import java.util.List;
 import java.util.UUID;
 
+import static uz.consortgroup.core.api.v1.dto.constants.SchemaPatterns.UUID_PATTERN_SCHEMA;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -21,8 +23,7 @@ import java.util.UUID;
 @Schema(name = "ResourceCreateRequestDto", description = "Создание ресурса урока (видео/изображение/документ и т.д.)")
 public class ResourceCreateRequestDto {
     @NotNull(message = "Lesson ID is required")
-    @Schema(description = "ID урока", example = "4716b6d1-a634-4b50-8a46-c249c248ca22",
-            requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(description = "ID урока", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
     private UUID lessonId;
 
     @NotNull(message = "Resource type is required")

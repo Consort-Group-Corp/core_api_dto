@@ -2,7 +2,10 @@ package uz.consortgroup.core.api.v1.dto.course.response.course;
 
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import uz.consortgroup.core.api.v1.dto.course.enumeration.CourseStatus;
 import uz.consortgroup.core.api.v1.dto.course.enumeration.CourseType;
 import uz.consortgroup.core.api.v1.dto.course.enumeration.PriceType;
@@ -14,14 +17,16 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
+import static uz.consortgroup.core.api.v1.dto.constants.SchemaPatterns.UUID_PATTERN_SCHEMA;
+
 @Data @Builder @NoArgsConstructor @AllArgsConstructor
 @Schema(name = "CourseResponseDto", description = "Полная информация о курсе")
 public class CourseResponseDto {
 
-    @Schema(description = "ID курса", example = "9e09e19d-2988-453f-ab69-e8f39a8f723b")
+    @Schema(description = "ID курса", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
     private UUID id;
 
-    @Schema(description = "ID автора курса", example = "e2f00427-fd76-41ad-940e-4624955f9384")
+    @Schema(description = "ID автора курса", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
     private UUID authorId;
 
     @Schema(description = "Тип курса", example = "BASE", implementation = CourseType.class)

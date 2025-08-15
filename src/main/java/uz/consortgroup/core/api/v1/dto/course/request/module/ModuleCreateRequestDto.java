@@ -14,6 +14,8 @@ import uz.consortgroup.core.api.v1.dto.course.request.lesson.LessonCreateRequest
 import java.util.List;
 import java.util.UUID;
 
+import static uz.consortgroup.core.api.v1.dto.constants.SchemaPatterns.UUID_PATTERN_SCHEMA;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -21,8 +23,7 @@ import java.util.UUID;
 @Schema(name = "ModuleCreateRequestDto", description = "Создание модуля курса")
 public class ModuleCreateRequestDto {
     @NotNull(message = "Module name is required")
-    @Schema(description = "ID курса", example = "9e09e19d-2988-453f-ab69-e8f39a8f723b",
-            requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(description = "ID курса", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
     private UUID courseId;
 
     @NotBlank(message = "Module name is required")

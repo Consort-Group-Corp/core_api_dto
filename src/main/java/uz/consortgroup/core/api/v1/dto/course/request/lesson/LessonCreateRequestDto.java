@@ -16,14 +16,15 @@ import uz.consortgroup.core.api.v1.dto.course.request.resource.ResourceCreateReq
 import java.util.List;
 import java.util.UUID;
 
+import static uz.consortgroup.core.api.v1.dto.constants.SchemaPatterns.UUID_PATTERN_SCHEMA;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
 @Schema(name = "LessonCreateRequestDto", description = "Создание урока внутри модуля")
 public class LessonCreateRequestDto {
-    @Schema(description = "ID урока (для обновления/идемпотентности, опционально)",
-            example = "4716b6d1-a634-4b50-8a46-c249c248ca22", nullable = true)
+    @Schema(description = "ID урока", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
     private UUID lessonId;
 
     @NotNull(message = "Module ID is required")
