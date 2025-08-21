@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import uz.consortgroup.core.api.v1.dto.course.enumeration.CourseNotPurchasableReason;
 import uz.consortgroup.core.api.v1.dto.course.enumeration.CourseStatus;
 import uz.consortgroup.core.api.v1.dto.course.enumeration.CourseType;
 import uz.consortgroup.core.api.v1.dto.course.enumeration.PriceType;
@@ -25,4 +26,5 @@ public class CoursePurchaseValidationResponseDto {
     private Instant startTime;
     private Instant endTime;
     private boolean purchasable;
+    private CourseNotPurchasableReason reason;
 }

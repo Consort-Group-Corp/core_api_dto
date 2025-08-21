@@ -4,19 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import uz.consortgroup.core.api.v1.dto.user.enumeration.UserRole;
 
-import java.time.Instant;
 import java.util.UUID;
 
-@Builder
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ForumTopicResponse {
+@Data
+@Builder
+public class ForumAuthorDto {
     private UUID id;
-    private UUID forumId;
-    private String title;
-    private String content;
-    private UUID authorId;
-    private Instant createdAt;
+    private String lastName;
+    private String firstName;
+    private String middleName;
+    private UserRole role;
 }

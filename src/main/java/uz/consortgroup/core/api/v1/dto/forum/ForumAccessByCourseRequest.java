@@ -12,7 +12,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ForumAccessRequest {
+public class ForumAccessByCourseRequest {
     @NotNull(message = "User ID is required")
     private UUID userId;
 

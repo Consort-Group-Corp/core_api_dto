@@ -1,4 +1,4 @@
-package uz.consortgroup.core.api.v1.dto.forum;
+package uz.consortgroup.core.api.v1.dto.forum.enumeration;
 
 public enum ForumAccessReason {
     USER_HAS_ACCESS,

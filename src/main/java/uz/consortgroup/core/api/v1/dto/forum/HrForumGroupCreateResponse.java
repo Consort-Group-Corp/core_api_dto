@@ -1,18 +1,23 @@
 package uz.consortgroup.core.api.v1.dto.forum;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
+
+import static uz.consortgroup.core.api.v1.dto.constants.SchemaPatterns.UUID_PATTERN_SCHEMA;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-@Schema(name = "HrForumGroupCreateResponse", description = "Результат создания форумной группы")
+@Schema(name = "Ид созданной форумной группы", description = "Результат создания форумной группы")
 public class HrForumGroupCreateResponse {
 
     @Schema(description = "Идентификатор созданной группы", format = "uuid",
-            example = "8b2f9b6d-0b3a-4c68-9d5e-1a2b3c4d5e6f")
+            pattern = UUID_PATTERN_SCHEMA)
     private UUID groupId;
 }
