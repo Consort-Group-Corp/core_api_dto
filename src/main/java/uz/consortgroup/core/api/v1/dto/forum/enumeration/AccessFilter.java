@@ -1,7 +1,9 @@
 package uz.consortgroup.core.api.v1.dto.forum.enumeration;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import uz.consortgroup.core.api.v1.dto.user.enumeration.ForumAccessType;
 
+@Schema(description = "Фильтр по доступу к форуму: ALL — не фильтровать")
 public enum AccessFilter {
     ALL,
     OPEN,
