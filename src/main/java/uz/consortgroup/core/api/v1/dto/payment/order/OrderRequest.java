@@ -5,6 +5,8 @@ import jakarta.validation.constraints.*;
 import lombok.*;
 import java.util.UUID;
 
+import static uz.consortgroup.core.api.v1.dto.constants.SchemaPatterns.UUID_PATTERN_SCHEMA;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -13,8 +15,8 @@ import java.util.UUID;
 public class OrderRequest {
 
     @NotNull(message = "userId is required")
-    @Schema(description = "Идентификатор пользователя", format = "uuid",
-            example = "2fbbf276-e14f-4db3-a2b3-db543d51d69c", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(description = "Идентификатор пользователя", type = "string", maxLength = 36,
+            pattern = UUID_PATTERN_SCHEMA)
     private UUID userId;
 
     @NotBlank(message = "externalOrderId is required")
@@ -25,8 +27,8 @@ public class OrderRequest {
     private String externalOrderId;
 
     @NotNull(message = "itemId is required")
-    @Schema(description = "Идентификатор оплачиваемого объекта (курс/подписка/сертификат)", format = "uuid",
-            example = "b6a1dd6c-f6f1-4b42-9b0a-2d7a2d2d3c1f", requiredMode = Schema.RequiredMode.REQUIRED)
+    @Schema(description = "Идентификатор оплачиваемого объекта (курс/подписка/сертификат)", type = "string", maxLength = 36,
+            pattern = UUID_PATTERN_SCHEMA)
     private UUID itemId;
 
     @NotNull(message = "itemType is required")
