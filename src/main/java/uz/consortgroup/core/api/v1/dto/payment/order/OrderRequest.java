@@ -13,12 +13,6 @@ import static uz.consortgroup.core.api.v1.dto.constants.SchemaPatterns.UUID_PATT
 @Builder
 @Schema(name = "OrderRequest", description = "Запрос на создание заказа")
 public class OrderRequest {
-
-    @NotNull(message = "userId is required")
-    @Schema(description = "Идентификатор пользователя", type = "string", maxLength = 36,
-            pattern = UUID_PATTERN_SCHEMA)
-    private UUID userId;
-
     @NotBlank(message = "externalOrderId is required")
     @Size(min = 1, max = 50, message = "External order ID must be between 1 and 50 characters")
     @Pattern(regexp = "^[a-zA-Z0-9_-]+$", message = "External order ID must contain only letters, numbers, underscores, or hyphens")
