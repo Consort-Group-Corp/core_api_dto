@@ -33,9 +33,8 @@ public class UserProfileRequestDto {
     private LocalDate bornDate;
 
     @Schema(description = "Телефон (+998XXXXXXXXX)", example = "+998901234567", maxLength = 13)
-    @NotBlank(message = "Phone number is required")
     @Size(max = 13)
-    @Pattern(regexp = "^\\+998\\d{9}$")
+    @Pattern(regexp = "^$|^\\+998\\d{9}$") // разрешает пустую строку или валидный номер
     private String phoneNumber;
 
     @Schema(description = "Место работы", example = "Consort Group", maxLength = 120)
