@@ -2,6 +2,7 @@ package uz.consortgroup.core.api.v1.dto.user.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.*;
 import lombok.*;
 
@@ -33,7 +34,7 @@ public class UserProfileRequestDto {
     private LocalDate bornDate;
 
     @Schema(description = "Телефон (+998XXXXXXXXX)", example = "+998901234567", maxLength = 13)
-    @NotBlank(message = "Phone number is required")
+    @Nullable
     @Size(max = 13)
     @Pattern(regexp = "^\\+998\\d{9}$")
     private String phoneNumber;
