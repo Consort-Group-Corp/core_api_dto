@@ -11,6 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import uz.consortgroup.core.api.v1.dto.webinar.enumeration.LanguageCode;
+import uz.consortgroup.core.api.v1.dto.webinar.enumeration.WebinarCategory;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -35,9 +36,8 @@ public class WebinarUpdateRequestDto {
     private String title;
 
     @NotNull(message = "Category required")
-    @Size(max = 100, message = "Category must not exceed 100 characters")
-    @Schema(description = "Категория", type = "string", maxLength = 100)
-    private String category;
+    @Schema(description = "Категория вебинара", example = "planned")
+    private WebinarCategory category;
 
     @NotNull(message = "Start time is required")
     @Schema(description = "Время начала вебинара", type = "string", format = "date-time")
