@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import uz.consortgroup.core.api.v1.dto.webinar.enumeration.LanguageCode;
+import uz.consortgroup.core.api.v1.dto.webinar.enumeration.WebinarCategory;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -27,7 +28,7 @@ public class WebinarResponseDto {
     private String title;
 
     @Schema(description = "Категория вебинара")
-    private String category;
+    private WebinarCategory category;
 
     @Schema(description = "Ссылка на превью вебинара")
     private String previewUrl;
