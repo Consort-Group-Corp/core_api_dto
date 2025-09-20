@@ -35,8 +35,8 @@ public class WebinarCreateRequestDto {
 
     @NotNull(message = "Category is required")
     @Schema(description = "Категория вебинара",
-            allowableValues = {"PLANNED", "PAST"},
-            example = "PLANNED")
+            allowableValues = {"planned", "past"},
+            example = "planned")
     private WebinarCategory category;
 
     @NotNull(message = "Start time is required")
