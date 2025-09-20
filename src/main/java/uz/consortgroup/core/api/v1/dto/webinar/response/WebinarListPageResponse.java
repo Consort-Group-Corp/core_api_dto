@@ -12,7 +12,9 @@ import java.util.List;
 @Schema(description = "Список вебинаров")
 public class WebinarListPageResponse {
 
-    @ArraySchema(arraySchema = @Schema(description = "Список вебинаров"))
+    @ArraySchema(arraySchema = @Schema(description = "Список вебинаров"),
+            minItems = 1,
+            maxItems = 100)
     private List<WebinarListItemResponseDto> webinars;
 
     @Schema(description = "Пустой ли список")
