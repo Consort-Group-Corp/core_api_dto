@@ -51,7 +51,12 @@ public class WebinarResponseDto {
     @Schema(description = "Язык вебинара", example = "RU")
     private LanguageCode languageCode;
 
-    @ArraySchema(arraySchema = @Schema(description = "Участники вебинара"), schema = @Schema(type = "string"))
+    @ArraySchema(
+            arraySchema = @Schema(description = "Список email участников"),
+            schema = @Schema(format = "email", example = "user1@example.com"),
+            minItems = 1,
+            maxItems = 100
+    )
     private List<String> participants;
 
     @Schema(description = "ID создателя вебинара", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
