@@ -23,7 +23,6 @@ public class ForumUpdateRequestDto {
     @NotNull(message = "Forum access policy is required")
     private ForumAccessPolicy forumAccessPolicy;
 
-    @NotNull(message = "Group ID is required")
     private UUID groupId;
 
     @NotNull(message = "Start time is required")
