@@ -9,15 +9,18 @@ import uz.consortgroup.core.api.v1.dto.forum.enumeration.ComplaintReason;
 import java.time.Instant;
 import java.util.UUID;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class UserBlockResponseDto {
+public class UserMuteListItemResponseDto {
     private UUID id;
-    private UUID userId;
     private UUID forumId;
+    private ModerationUserInfoResponseDto user;
+    private ModerationUserInfoResponseDto issuedBy;
     private ComplaintReason reason;
-    private UUID issuedBy;
+    private Instant muteUntil;
     private Instant createdAt;
+    private Boolean active;
+    private Integer violationCount;
 }

@@ -16,8 +16,9 @@ import java.util.UUID;
 public class UserMuteResponseDto {
     private UUID id;
     private UUID userId;
-    private ComplaintReason reason;
+    private UUID forumId;
     private UUID issuedBy;
+    private ComplaintReason reason;
     private Instant muteUntil;
     private Instant createdAt;
 }

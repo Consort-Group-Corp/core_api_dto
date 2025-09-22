@@ -13,11 +13,12 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserBlockResponseDto {
+public class UserBlockListItemResponseDto {
     private UUID id;
-    private UUID userId;
     private UUID forumId;
+    private ModerationUserInfoResponseDto user;
+    private ModerationUserInfoResponseDto issuedBy;
     private ComplaintReason reason;
-    private UUID issuedBy;
     private Instant createdAt;
+    private Integer violationCount;
 }
