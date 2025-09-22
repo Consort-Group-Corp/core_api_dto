@@ -22,9 +22,6 @@ public class UserMuteCreateRequestDto {
     @NotNull(message = "Reason is required")
     private ComplaintReason reason;
 
-    @NotNull(message = "Issued by is required")
-    private UUID issuedBy;
-
     @NotNull(message = "Mute until is required")
     private Instant muteUntil;
 }

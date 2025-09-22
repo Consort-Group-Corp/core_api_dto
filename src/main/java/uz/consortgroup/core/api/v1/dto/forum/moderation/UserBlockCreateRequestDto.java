@@ -20,7 +20,4 @@ public class UserBlockCreateRequestDto {
 
     @NotNull(message = "Reason is required")
     private ComplaintReason reason;
-
-    @NotNull(message = "Issued by is required")
-    private UUID issuedBy;
 }
