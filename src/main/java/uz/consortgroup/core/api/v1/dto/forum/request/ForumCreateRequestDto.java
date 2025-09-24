@@ -1,5 +1,6 @@
 package uz.consortgroup.core.api.v1.dto.forum.request;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Data
 @Builder
+@Schema(description = "Создание форума")
 public class ForumCreateRequestDto {
 
     @NotNull(message = "Course ID is required")
