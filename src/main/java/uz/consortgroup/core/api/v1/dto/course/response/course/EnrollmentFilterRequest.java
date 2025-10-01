@@ -15,4 +15,5 @@ import java.util.UUID;
 public class EnrollmentFilterRequest {
     private UUID courseId;
     private List<UUID> userIds;
+
 }
