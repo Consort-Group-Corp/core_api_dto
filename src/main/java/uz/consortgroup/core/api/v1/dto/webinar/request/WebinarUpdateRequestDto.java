@@ -69,7 +69,7 @@ public class WebinarUpdateRequestDto {
 
     @ArraySchema(
             arraySchema = @Schema(description = "Полная замена состава участников (email или PINFL)"),
-            schema = @Schema(example = "user2@example.com / 30809912345678"),
+            schema = @Schema(example = "user2@example.com || 30809912345678"),
             maxItems = 100
     )
     private Set<@EmailOrPinfl String> participants;

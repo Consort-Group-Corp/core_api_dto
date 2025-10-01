@@ -75,7 +75,7 @@ public class WebinarCreateRequestDto {
 
     @ArraySchema(
             arraySchema = @Schema(description = "Список участников (email или 14-значный PINFL)"),
-            schema = @Schema(example = "user1@example.com / 30809912345678"),
+            schema = @Schema(example = "user1@example.com || 30809912345678"),
             maxItems = 100
     )
     private Set<@EmailOrPinfl String> participants;
