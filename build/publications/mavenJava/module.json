@@ -1,0 +1,90 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "uz.consortgroup",
+    "module": "core-api-dto",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "core-api-dto-0.0.1.jar",
+          "url": "core-api-dto-0.0.1.jar",
+          "size": 463888,
+          "sha512": "965aadcf9934196ebfa01f1f9e912482c53a633e0a264ce21024b45adce87f2aa71a99c156c1532c3ffa9cf184135a3b700a52afc5ab4be98a5bb08cea98274c",
+          "sha256": "1d227996f7e6ee38a6a9304dcec1a39ef6edd2d2f11631f8fdc1297fbd3c9473",
+          "sha1": "a705fe942dc7a52217a3442a566285a0d5b9d836",
+          "md5": "8eef15ef15d796c15d0e9a5064a71456"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springdoc",
+          "module": "springdoc-openapi-starter-webmvc-ui",
+          "version": {
+            "requires": "2.8.9"
+          }
+        },
+        {
+          "group": "jakarta.validation",
+          "module": "jakarta.validation-api",
+          "version": {
+            "requires": "3.0.2"
+          }
+        },
+        {
+          "group": "com.fasterxml.jackson.core",
+          "module": "jackson-databind",
+          "version": {
+            "requires": "2.17.0"
+          }
+        },
+        {
+          "group": "jakarta.persistence",
+          "module": "jakarta.persistence-api",
+          "version": {
+            "requires": "3.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "core-api-dto-0.0.1.jar",
+          "url": "core-api-dto-0.0.1.jar",
+          "size": 463888,
+          "sha512": "965aadcf9934196ebfa01f1f9e912482c53a633e0a264ce21024b45adce87f2aa71a99c156c1532c3ffa9cf184135a3b700a52afc5ab4be98a5bb08cea98274c",
+          "sha256": "1d227996f7e6ee38a6a9304dcec1a39ef6edd2d2f11631f8fdc1297fbd3c9473",
+          "sha1": "a705fe942dc7a52217a3442a566285a0d5b9d836",
+          "md5": "8eef15ef15d796c15d0e9a5064a71456"
+        }
+      ]
+    }
+  ]
+}
