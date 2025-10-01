@@ -10,7 +10,7 @@ import uz.consortgroup.core.api.v1.dto.webinar.enumeration.LanguageCode;
 import uz.consortgroup.core.api.v1.dto.webinar.enumeration.WebinarCategory;
 
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 import static uz.consortgroup.core.api.v1.dto.constants.SchemaPatterns.UUID_PATTERN_SCHEMA;
@@ -24,47 +24,38 @@ public class WebinarResponseDto {
     @Schema(description = "ID вебинара", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
     private UUID id;
 
-    @Schema(description = "Заголовок вебинара")
     private String title;
 
-    @Schema(description = "Категория вебинара")
     private WebinarCategory category;
 
-    @Schema(description = "Ссылка на превью вебинара")
     private String previewUrl;
 
-    @Schema(description = "Имя файла превью вебинара")
     private String previewFilename;
 
-    @Schema(description = "Время начала вебинара")
     private LocalDateTime startTime;
 
-    @Schema(description = "Время окончания вебинара")
     private LocalDateTime endTime;
 
-    @Schema(description = "Ссылка на платформу вебинара")
     private String platformUrl;
 
     @Schema(description = "ID курса", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
     private UUID courseId;
 
-    @Schema(description = "Язык вебинара", example = "RU")
     private LanguageCode languageCode;
 
+    @Schema(description = "Ограничение участия только записанными на курс")
+    private Boolean onlyCourseParticipants;
+
     @ArraySchema(
-            arraySchema = @Schema(description = "Список email участников"),
-            schema = @Schema(format = "email", example = "user1@example.com"),
-            minItems = 1,
+            arraySchema = @Schema(description = "Список участников (email или PINFL)"),
+            schema = @Schema(example = "user1@example.com / 30809912345678"),
             maxItems = 100
     )
-    private List<String> participants;
+    private Set<String> participants;
 
-    @Schema(description = "ID создателя вебинара", type = "string", maxLength = 36, pattern = UUID_PATTERN_SCHEMA)
     private UUID createdBy;
 
-    @Schema(description = "Дата создания", type = "LocalDateTime")
     private LocalDateTime createdAt;
 
-    @Schema(description = "Дата обновления", type = "LocalDateTime")
     private LocalDateTime updatedAt;
 }
